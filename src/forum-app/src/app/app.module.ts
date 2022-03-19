@@ -3,9 +3,6 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
-import { ThemeService } from './core/service/theme.service';
-import { PostService } from './core/service/post.service';
-import { UserService } from './core/service/user.service';
 import { AppRoutingModule } from './app-routing.module';
 import { RouterModule } from '@angular/router';
 import { SharedModule } from './component/shared/shared.module';
