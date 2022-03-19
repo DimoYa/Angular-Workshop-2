@@ -8,9 +8,10 @@ import { ThemeListItemComponent } from './theme-list-item/theme-list-item.compon
 import { ThemeService } from 'src/app/core/service/theme.service';
 import { PostService } from 'src/app/core/service/post.service';
 import { UserService } from 'src/app/core/service/user.service';
+import { CreateThemeComponent } from './create-theme/create-theme.component';
 
 @NgModule({
-  declarations: [AsideComponent, ThemeListComponent, ThemeListItemComponent],
+  declarations: [AsideComponent, ThemeListComponent, ThemeListItemComponent, CreateThemeComponent],
   imports: [CommonModule, AppRoutingModule, RouterModule],
   providers: [ThemeService, PostService, UserService],
 })
