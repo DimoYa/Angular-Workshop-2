@@ -7,6 +7,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { RouterModule } from '@angular/router';
 import { SharedModule } from './component/shared/shared.module';
 import { ThemeModule } from './component/theme/theme.module';
+import { AuthenticationModule } from './component/authentication/authentication.module';
+import { ErrorModule } from './component/error/error.module';
 
 @NgModule({
   declarations: [
@@ -17,8 +19,10 @@ import { ThemeModule } from './component/theme/theme.module';
     HttpClientModule,
     AppRoutingModule,
     RouterModule,
+    AuthenticationModule,
     SharedModule,
-    ThemeModule
+    ThemeModule,
+    ErrorModule
   ],
   providers: [],
   bootstrap: [AppComponent]
