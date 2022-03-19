@@ -2,30 +2,28 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './component/header/header.component';
-import { FooterComponent } from './component/footer/footer.component';
-import { AsideComponent } from './component/aside/aside.component';
-import { ThemeListComponent } from './component/theme-list/theme-list.component';
-import { ThemeListItemComponent } from './component/theme-list-item/theme-list-item.component';
 import { HttpClientModule } from '@angular/common/http';
-import { ThemeService } from './service/theme.service';
-import { PostService } from './service/post.service';
-import { UserService } from './service/user.service';
+import { ThemeService } from './core/service/theme.service';
+import { PostService } from './core/service/post.service';
+import { UserService } from './core/service/user.service';
+import { AppRoutingModule } from './app-routing.module';
+import { RouterModule } from '@angular/router';
+import { SharedModule } from './component/shared/shared.module';
+import { ThemeModule } from './component/theme/theme.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent,
-    FooterComponent,
-    AsideComponent,
-    ThemeListComponent,
-    ThemeListItemComponent,
   ],
   imports: [
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+    AppRoutingModule,
+    RouterModule,
+    SharedModule,
+    ThemeModule
   ],
-  providers: [ThemeService, PostService, UserService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

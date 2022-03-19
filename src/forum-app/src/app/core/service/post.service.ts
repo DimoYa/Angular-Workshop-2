@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/internal/Observable';
-import { environment } from '../../environments/environment';
+import { environment } from '../../../environments/environment';
 import IPost from '../model/Post';
 
 const BASE_URL = environment.apiUrl;

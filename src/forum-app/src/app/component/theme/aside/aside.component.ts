@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import IPost from 'src/app/model/Post';
-import { PostService } from 'src/app/service/post.service';
+import IPost from 'src/app/core/model/Post';
+import { PostService } from 'src/app/core/service/post.service';
 
 @Component({
   selector: 'app-aside',
