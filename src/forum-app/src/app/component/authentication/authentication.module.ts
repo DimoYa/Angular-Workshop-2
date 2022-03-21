@@ -3,8 +3,9 @@ import { CommonModule } from '@angular/common';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { RouterModule } from '@angular/router';
-import { UserService } from 'src/app/core/service/user.service';
 import { ProfileComponent } from './profile/profile.component';
+import { FormsModule } from '@angular/forms';
+import { UserService } from '../../core/service/user.service';
 
 
 
@@ -17,9 +18,10 @@ import { ProfileComponent } from './profile/profile.component';
 imports: [
     CommonModule,
     RouterModule,
+    FormsModule
 ],
 providers: [
-    UserService
+    UserService,
 ], 
 exports: [
     RegisterComponent

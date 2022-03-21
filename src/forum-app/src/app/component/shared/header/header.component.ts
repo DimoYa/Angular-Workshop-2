@@ -6,12 +6,20 @@ import { UserService } from 'src/app/core/service/user.service';
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css'],
 })
-export class HeaderComponent implements OnInit {
-  public isLoggedIn!: boolean;
+export class HeaderComponent {
+  get isLogged(): boolean | null {
+    return this.userService.isLoggedInUser;
+  }
 
-  constructor(public userService: UserService) {}
+  get getCurrentUser(): string | undefined {
+    console.log(this.userService.loggedInUser);
+    return this.userService.loggedInUser?.username;
+  }
 
-  ngOnInit(): void {
-    this.isLoggedIn = this.userService.isLoggedIn();
+  constructor(public userService: UserService) {
+  }
+
+  logout() {
+    this.userService.logOut();
   }
 }

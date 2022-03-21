@@ -1,15 +1,17 @@
 import { Component, OnInit } from '@angular/core';
+import { UserService } from '../../../core/service/user.service';
 
 @Component({
   selector: 'app-landing',
   templateUrl: './landing.component.html',
   styleUrls: ['./landing.component.css']
 })
-export class LandingComponent implements OnInit {
+export class LandingComponent {
 
-  constructor() { }
-
-  ngOnInit(): void {
+  get isLogged(): boolean | null {
+    return this.userService.isLoggedInUser;
   }
+
+  constructor(public userService: UserService) { }
 
 }
