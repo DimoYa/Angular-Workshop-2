@@ -27,7 +27,7 @@ export class UserService {
 
   login(user: ILogin) {
     const currentUser = this.registeredUsers?.find((x) => x.email == user.email);
-    if (currentUser != undefined) {
+    if (currentUser != undefined && currentUser.password == user.password) {
       this.isLoggedInUser = true;
       localStorage.setItem('isLogged', JSON.stringify(true));
       this.loggedInUser = currentUser;
