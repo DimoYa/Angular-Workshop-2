@@ -5,10 +5,14 @@ import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { RouterModule } from '@angular/router';
-import { SharedModule } from './component/shared/shared.module';
-import { ThemeModule } from './component/theme/theme.module';
-import { AuthenticationModule } from './component/authentication/authentication.module';
-import { ErrorModule } from './component/error/error.module';
+import { CoreModule } from './core/core.module';
+import { ThemeModule } from './feature/themes/theme.module';
+import { PagesModule } from './feature/pages/pages.module';
+import { AuthenticationModule } from './authentication/authentication.module';
+import { HeaderComponent } from './core/header/header.component';
+import { FooterComponent } from './core/footer/footer.component';
+
+
 
 @NgModule({
   declarations: [
@@ -17,14 +21,16 @@ import { ErrorModule } from './component/error/error.module';
   imports: [
     BrowserModule,
     HttpClientModule,
-    AppRoutingModule,
     RouterModule,
-    AuthenticationModule,
-    SharedModule,
+    CoreModule,
+    AppRoutingModule,
     ThemeModule,
-    ErrorModule
+    PagesModule,
+    AuthenticationModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent,
+    HeaderComponent,
+    FooterComponent]
 })
 export class AppModule { }

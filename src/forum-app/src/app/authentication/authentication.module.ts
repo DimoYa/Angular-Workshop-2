@@ -5,8 +5,7 @@ import { RegisterComponent } from './register/register.component';
 import { RouterModule } from '@angular/router';
 import { ProfileComponent } from './profile/profile.component';
 import { FormsModule } from '@angular/forms';
-import { UserService } from '../../core/service/user.service';
-
+import { UserService } from '../core/service/user.service';
 
 
 @NgModule({
