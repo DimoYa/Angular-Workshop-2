@@ -8,10 +8,6 @@ import { UserService } from '../../../core/service/user.service';
 })
 export class LandingComponent {
 
-  get isLogged(): boolean | null {
-    return this.userService.isLoggedInUser;
-  }
-
-  constructor(public userService: UserService) { }
+ 
 
 }

@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ThemeListItemComponent } from './theme-list-item.component';
+import { WelcomeComponent } from './welcome.component';
 
-describe('ThemeListItemComponent', () => {
-  let component: ThemeListItemComponent;
-  let fixture: ComponentFixture<ThemeListItemComponent>;
+describe('WelcomeComponent', () => {
+  let component: WelcomeComponent;
+  let fixture: ComponentFixture<WelcomeComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ThemeListItemComponent ]
+      declarations: [ WelcomeComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ThemeListItemComponent);
+    fixture = TestBed.createComponent(WelcomeComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

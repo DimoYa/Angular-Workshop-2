@@ -1,4 +1,5 @@
 interface IRegister {
+    userId : string,
     username: string,
     email: string,
     tel: string,

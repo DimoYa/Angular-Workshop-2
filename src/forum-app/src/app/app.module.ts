@@ -6,7 +6,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { RouterModule } from '@angular/router';
 import { CoreModule } from './core/core.module';
-import { ThemeModule } from './feature/themes/theme.module';
+import { ThemesModule } from './feature/themes/themes.module';
 import { PagesModule } from './feature/pages/pages.module';
 import { AuthenticationModule } from './authentication/authentication.module';
 import { HeaderComponent } from './core/header/header.component';
@@ -24,7 +24,7 @@ import { FooterComponent } from './core/footer/footer.component';
     RouterModule,
     CoreModule,
     AppRoutingModule,
-    ThemeModule,
+    ThemesModule,
     PagesModule,
     AuthenticationModule,
   ],

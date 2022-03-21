@@ -5,7 +5,7 @@ import { RegisterComponent } from './register/register.component';
 import { RouterModule } from '@angular/router';
 import { ProfileComponent } from './profile/profile.component';
 import { FormsModule } from '@angular/forms';
-import { UserService } from '../core/service/user.service';
+import { AuthenticationRoutingModule } from './authentication-routing.module';
 
 
 @NgModule({
@@ -17,13 +17,8 @@ import { UserService } from '../core/service/user.service';
 imports: [
     CommonModule,
     RouterModule,
-    FormsModule
+    FormsModule,
+    AuthenticationRoutingModule
 ],
-providers: [
-    UserService,
-], 
-exports: [
-    RegisterComponent
-]
 })
 export class AuthenticationModule { }
