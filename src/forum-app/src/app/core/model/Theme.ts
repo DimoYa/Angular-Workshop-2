@@ -5,7 +5,8 @@ interface ITheme extends IBase {
   subscribers: string[];
   posts: string[];
   themeName: 'Angular 10';
-  userId: IUser;
+  userId: IUser | null;
+  postText: string;
 }
 
 export default ITheme;

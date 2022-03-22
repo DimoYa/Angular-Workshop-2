@@ -10,6 +10,7 @@ import { UserService } from '../../core/service/user.service';
 import { ThemesNewComponent } from './themes-new/themes-new.component';
 import { ThemesRoutingModule } from './themes-routing.module';
 import { SharedModule } from '../../shared/shared.module';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { SharedModule } from '../../shared/shared.module';
     CommonModule,
     RouterModule,
     SharedModule,
-    ThemesRoutingModule
+    ThemesRoutingModule,
+    FormsModule
   ],
   providers: [ThemeService, PostService, UserService],
 })

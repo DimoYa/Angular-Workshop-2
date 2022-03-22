@@ -1,14 +1,14 @@
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import ILogin from '../model/Login';
-import IRegister from '../model/Register';
+import IUser from '../model/User';
 
 @Injectable({
   providedIn: 'root',
 })
 export class UserService {
-  registeredUsers: IRegister[] | null;
-  loggedInUser: IRegister | null;
+  registeredUsers: IUser[] | null;
+  loggedInUser: IUser | null;
   isLoggedInUser: boolean | null;
 
   constructor(private router: Router) {
@@ -17,7 +17,7 @@ export class UserService {
     this.registeredUsers = JSON.parse(localStorage.getItem('registeredUsers') || '[]');
   }
 
-  register(user: IRegister) {
+  register(user: IUser) {
 
     this.registeredUsers?.push(user);
     localStorage.setItem('registeredUsers', JSON.stringify(this.registeredUsers));
@@ -27,6 +27,7 @@ export class UserService {
 
   login(user: ILogin) {
     const currentUser = this.registeredUsers?.find((x) => x.email == user.email);
+    currentUser!._id = '5fa64b162183ce1728ff371d';
     if (currentUser != undefined && currentUser.password == user.password) {
       this.isLoggedInUser = true;
       localStorage.setItem('isLogged', JSON.stringify(true));

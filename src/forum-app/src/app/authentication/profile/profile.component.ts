@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import IRegister from '../../core/model/Register';
+import IUser from '../../core/model/User';
 import { UserService } from '../../core/service/user.service';
 
 @Component({
@@ -9,7 +9,7 @@ import { UserService } from '../../core/service/user.service';
 })
 export class ProfileComponent implements OnInit {
 
-  currentUser: IRegister | null = this.userService.getCurrentUser();
+  currentUser: IUser | null = this.userService.getCurrentUser();
 
   constructor(private userService: UserService) { }
 

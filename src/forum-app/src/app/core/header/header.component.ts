@@ -11,12 +11,10 @@ export class HeaderComponent {
     return this.userService.isLoggedInUser;
   }
 
-  get getCurrentUser(): string | undefined {
-    console.log(this.userService.loggedInUser);
-    return this.userService.loggedInUser?.username;
-  }
+  getCurrentUserName: string | undefined 
 
   constructor(public userService: UserService) {
+    this.getCurrentUserName = this.userService.getCurrentUser()?.username;
   }
 
   logout() {

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import IRegister from '../../core/model/Register';
+import IUser from '../../core/model/User';
 import { UserService } from '../../core/service/user.service';
 
 @Component({
@@ -13,7 +13,7 @@ export class RegisterComponent implements OnInit {
 
   ngOnInit(): void {
   }
-    register(data: IRegister) {
+    register(data: IUser) {
       this.userService.register(data);
     }
 }
