@@ -43,6 +43,6 @@ export class UserService {
   }
 
   getCurrentUser() {
-    return this.getCurrentUser;
+    return this.loggedInUser;
   }
 }
