@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import ITheme from '../model/Theme';
 import { environment } from '../../../environments/environment';
+import IPost from '../model/Post';
 
 const BASE_URL = environment.apiUrl;
 
@@ -15,6 +16,10 @@ export class ThemeService {
 
   getThemes(): Observable<ITheme[]> {
     return this.http.get<ITheme[]>(`${BASE_URL}/themes`);
+  }
+
+  getThemeById(id: string): Observable<ITheme<IPost>> {
+    return this.http.get<ITheme<IPost>>(`${BASE_URL}/themes/${id}`);
   }
 
   createTheme(body: Object) : Observable<Object> {

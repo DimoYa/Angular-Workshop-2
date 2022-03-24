@@ -1,9 +1,9 @@
 import IBase from './Base';
 import IUser from './User';
 
-interface ITheme extends IBase {
+interface ITheme<T = string> extends IBase {
   subscribers: string[];
-  posts: string[];
+  posts: T[];
   themeName: 'Angular 10';
   userId: IUser | null;
   postText: string;

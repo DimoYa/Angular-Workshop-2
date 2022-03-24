@@ -11,13 +11,15 @@ import { ThemesNewComponent } from './themes-new/themes-new.component';
 import { ThemesRoutingModule } from './themes-routing.module';
 import { SharedModule } from '../../shared/shared.module';
 import { FormsModule } from '@angular/forms';
+import { ThemesDetailsComponent } from './themes-details/themes-details.component';
 
 @NgModule({
   declarations: [
     AsideComponent,
     ThemesListComponent,
     ThemesListItemComponent,
-    ThemesNewComponent
+    ThemesNewComponent,
+    ThemesDetailsComponent
       ],
   imports: [
     CommonModule,

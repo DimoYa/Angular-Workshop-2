@@ -29,8 +29,10 @@ import { FooterComponent } from './core/footer/footer.component';
     AuthenticationModule,
   ],
   providers: [],
-  bootstrap: [AppComponent,
+  bootstrap: [
+    AppComponent,
     HeaderComponent,
-    FooterComponent]
+    FooterComponent
+  ]
 })
 export class AppModule { }
